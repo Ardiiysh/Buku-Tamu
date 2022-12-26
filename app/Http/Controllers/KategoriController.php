@@ -39,12 +39,10 @@ class KategoriController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name' => 'required',
-            'detail' => 'required',
+            'kategori' => 'required',
         ]);
       
         Kategori::create($request->all());
-       
         return redirect()->route('kategoris.index')
                         ->with('success','kategori created successfully.');
     }
@@ -80,6 +78,7 @@ class KategoriController extends Controller
      */
     public function update(Request $request, Kategori $kategori)
     {
+        
         $request->validate([
             'kategori' => 'required',
         ]);
@@ -98,7 +97,7 @@ class KategoriController extends Controller
      */
     public function destroy(Kategori $kategori)
     {
-           $kategori->delete();
+        $kategori->delete();
        
         return redirect()->route('kategoris.index')
                         ->with('success','kategori deleted successfully');

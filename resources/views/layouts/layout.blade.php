@@ -36,10 +36,8 @@
                 <div class="card">
                   <div class="card-body">
                     <h4 class="card-title">@yield('title')</h4>
-                    <form class="forms-sample">
                     @yield('content')
  
-                    </form>
                   </div>
                 </div>
               </div>

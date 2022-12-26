@@ -38,7 +38,7 @@
             </a>
           </li>
           <li class="nav-item menu-items">
-            <a class="nav-link" href="kategoris">
+            <a class="nav-link" href="{{route('kategoris.index')}}">
               <span class="menu-icon">
                 <i class="mdi mdi-playlist-play"></i>
               </span>
